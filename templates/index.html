@@ -10,16 +10,16 @@
     <h1>My Todo List</h1>
 
     <form method="POST">
-        <input type="text" name="task" placeholder="Enter task">
+        <input type="text" name="task" placeholder="Enter task" required>
         <button type="submit">Add</button>
     </form>
 
     <ul>
         {% for task in tasks %}
-            <li>
-                {{ task["task"] }}
-                <a href="/delete/{{ task['id'] }}">❌</a>
-            </li>
+        <li>
+            {{ task["task"] }}
+            <a href="/delete/{{ task['id'] }}">❌</a>
+        </li>
         {% endfor %}
     </ul>
 </div>
